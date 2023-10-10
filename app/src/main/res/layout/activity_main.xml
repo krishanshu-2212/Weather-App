@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/sunny_gradient"
+    android:id="@+id/main_background">
+
+
+<!--    Top Layer Start-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/LocationLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/LocationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City Name"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:textColor="@color/UI_White"/>
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_location_on_24"
+                app:tint="@color/UI_White" />
+
+            <ImageView
+                android:id="@+id/downArrowIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_arrow_drop_down_24"
+                app:tint="@color/UI_White" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/settingIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_settings_24"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            app:tint="@color/white"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+<!--    Top Layer End-->
+
+<!--    Temperature Layer Start-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TemperatureDigit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22*C"
+            android:textSize="80sp"
+            android:textColor="@color/UI_White"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"/>
+<!--        <TextView-->
+<!--            android:id="@+id/TemperatureCelciusSymbol"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="°"-->
+<!--            android:textSize="80sp"-->
+<!--            android:textColor="@color/UI_White"-->
+<!--            android:layout_marginTop="20dp"/>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="15dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/outline_circle_24"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            app:tint="@color/UI_White" />-->
+
+        <TextView
+            android:id="@+id/TemperatureCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunny"
+            android:textSize="20sp"
+            android:textColor="@color/UI_White"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/todayMaxTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22°"
+            android:textSize="20sp"
+            android:textColor="@color/UI_White"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20sp"
+            android:textColor="@color/UI_White"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/todayMinTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14°"
+            android:textSize="20sp"
+            android:textColor="@color/UI_White"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="°"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textColor="@color/UI_White"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginBottom="8dp" />-->
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+<!--    Temperature Layer End-->
+
+<!--    Sun Layer Start-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="70dp">
+
+        <ImageView
+            android:id="@+id/TemperatureCenterIcon"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/finding"/>
+<!--            app:tint="@color/UI_SUN"/>-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+<!--    Sun Layer End-->
+
+<!--    Bottom Temperature Details-->
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:gravity="center_horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView0"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/UI_BLUE_TRANSPARENT">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp">
+
+            <!--        Today Line in Card View-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_wb_sunny_24"
+                    app:tint="@color/UI_White" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today"
+                    android:textColor="@color/UI_White"
+                    android:layout_marginStart="@dimen/temperaturePadding"
+                    android:layout_gravity="center"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22°/14°"
+                    android:textColor="@color/UI_White"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="50dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--        Today Line in Card View End-->
+
+            <!--        Tomorrow Line in Card View-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_cloud_24"
+                    app:tint="@color/UI_White" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomorrow"
+                    android:textColor="@color/UI_White"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24°/18°"
+                    android:textColor="@color/UI_White"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="50dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--        Tomorrow Line in Card View End-->
+
+            <!--        Next Day Line in Card View-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_cloud_24"
+                    app:tint="@color/UI_White" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday"
+                    android:textColor="@color/UI_White"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23°/17°"
+                    android:textColor="@color/UI_White"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="50dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--        Next Day Line in Card View End-->
+
+            <!--        Next Next Day Line in Card View-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_cloud_24"
+                    app:tint="@color/UI_White" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thursday"
+                    android:textColor="@color/UI_White"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25°/19°"
+                    android:textColor="@color/UI_White"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="50dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--        Next Next Day Line in Card View End-->
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+    <!--    Bottom Temperature Details End-->
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
