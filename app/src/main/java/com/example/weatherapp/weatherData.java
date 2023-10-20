@@ -38,6 +38,8 @@ public class weatherData {
             int roundedMaxTemp = (int)Math.rint(maxTemp);
             weatherD.maxTemperature = Integer.toString(roundedMaxTemp);
             Log.e(TAG, "fromJson: MaxTemp"+jsonObject.getJSONObject("main").getDouble("temp_max") );
+
+
             //Upto here
 
             return weatherD;
